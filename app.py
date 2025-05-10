@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__app__)
 CORS(app)  # ✅ Enable CORS immediately after Flask app initialization
 
 # Load the models
@@ -49,5 +49,5 @@ def predict_price():
     except Exception as e:
         return jsonify({"error": str(e)})
 
-if __name__ == "__main__":
+if __name__ == "__app__":
     app.run(debug=True)
